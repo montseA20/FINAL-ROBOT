@@ -119,3 +119,47 @@ Agregar un mecanismo de control de errores para verificar la conexión de hardwa
 Incluir parámetros configurables para la velocidad y el tiempo de rotación.
 
 Mejorar el manejo de las excepciones en caso de errores durante la ejecución.
+
+----
+AprilTag Detector Node
+
+Descripción
+
+Nodo de ROS 2 que detecta etiquetas AprilTag usando OpenCV y apriltag. Publica el ID de la etiqueta y su distancia al tópico /apriltag_data.
+
+*Requisitos*
+
+ROS 2
+
+Cámara compatible con OpenCV
+
+Dependencias
+
+Instala con:
+
+pip install opencv-python apriltag numpy
+
+*Uso*
+
+Activa ROS 2:
+
+source /opt/ros/<distro>/setup.bash
+
+Ejecuta el nodo:
+
+python <nombre_del_archivo>.py
+
+*Funcionamiento*
+
+Detecta etiquetas AprilTag.
+
+Calcula la distancia usando la longitud focal y el tamaño real del tag.
+
+Publica ID y distancia en /apriltag_data.
+
+*Parámetros*
+
+Longitud focal: 700 píxeles.
+
+Tamaño del tag: 10 cm.
+
